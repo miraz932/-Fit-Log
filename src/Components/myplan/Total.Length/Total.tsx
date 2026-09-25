@@ -9,8 +9,10 @@ export const Total = () => {
   return (
 
     <div>
+      <div className='mb-4'>
       <h2 className=' text-2xl font-bold'>MY PLAN</h2>
-      <h6 className='text-[#8A92A0]'>Cap of five lifts for today. Finish them, then load more.</h6>
+      <h6 className='text-[#8A92A0] '>Cap of five lifts for today. Finish them, then load more.</h6>
+      </div>
 
       <div className='flex justify-between px-6 py-5 pr-40 rounded-xl bg-[#13161D]'>
 

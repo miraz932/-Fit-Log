@@ -10,8 +10,8 @@ const HomeCart = async () => {
   return (
     <div className='container  mx-auto mt-10'>
       <div>
-        <h1>THE LIBRARY {data.length}</h1>
-        <p>Twelve lifts covering every major muscle group.</p>
+        <h1  className='text-2xl font-bold'>THE LIBRARY</h1>
+        <p className='text-[#9CA3AF]'>Twelve lifts covering every major muscle group.</p>
       </div>
 
 
