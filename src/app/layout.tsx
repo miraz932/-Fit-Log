@@ -4,6 +4,7 @@ import "./globals.css";
 import Navber from "@/Components/Components/Navber";
 import Footer from "@/Components/Components/Footer/Footer";
 import ContexProvider from "@/Contexts/Contex";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -32,12 +33,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <ContexProvider>
           <Navber></Navber>
-        <div className="flex-1">
+        <div>
 
           {children}
         </div>
        
           <Footer></Footer>
+           <ToastContainer/>
         </ContexProvider>
 
       </body>

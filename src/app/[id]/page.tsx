@@ -92,7 +92,7 @@ const DetailsPage = async ({ params }: IParamsType) => {
         </div>
 
 
-      <div className='flex gap-4'>
+      <div className=''>
         <Details paramsData={paramsData}></Details>
       </div>
 

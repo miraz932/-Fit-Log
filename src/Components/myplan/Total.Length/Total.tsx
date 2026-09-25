@@ -12,7 +12,7 @@ export const Total = () => {
       <h2 className=' text-2xl font-bold'>MY PLAN</h2>
       <h6 className='text-[#8A92A0]'>Cap of five lifts for today. Finish them, then load more.</h6>
 
-      <div className='flex justify-between px-6 py-5 rounded-xl bg-[#13161D]'>
+      <div className='flex justify-between px-6 py-5 pr-40 rounded-xl bg-[#13161D]'>
 
         <div className=''>
           <h3 className='text-[#8A92A0]'>Exercises</h3>
