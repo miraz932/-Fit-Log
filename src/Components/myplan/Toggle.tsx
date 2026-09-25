@@ -10,8 +10,8 @@ const ToggleButton = () => {
   }
   return (
     <div>
-      <button onClick={() => handleToggle(false)} className={`${toggle === false ? "bg-[#14c314]" : ""} px-2 cursor-pointer rounded-[8px]`}>Today s plan </button>
-      <button onClick={() => handleToggle(true)} className={`${toggle === true ? "bg-[#14c314]" : ""} px-2 cursor-pointer rounded-[8px]`}>Saved</button>
+      <button onClick={() => handleToggle(false)} className={`${toggle === false ? "bg-[#C2F10D]" : ""} px-2 cursor-pointer rounded-[8px]`}>Today s plan </button>
+      <button onClick={() => handleToggle(true)} className={`${toggle === true ? "bg-[#C2F10D]" : ""} px-2 cursor-pointer rounded-[8px]`}>Saved</button>
       <div>
     </div>
       </div>
