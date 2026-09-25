@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import logo from "../../../public/logo.png"
+import NavButton from './Button';
+
+
+
 
 const Navber = () => {
   return (
@@ -20,9 +23,7 @@ const Navber = () => {
         </ul>
 
         <div className='flex gap-2'>
-          <button>Plan</button>
-          <button>Saved</button>
-
+            <NavButton></NavButton>
         </div>
  
 
