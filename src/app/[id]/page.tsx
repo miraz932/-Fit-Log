@@ -1,5 +1,6 @@
 import Details from '@/Components/Details/Details';
-import { getSingleData } from '@/LIb/Api';
+import getApidata from '@/LIb/Api';
+
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import React from 'react';
@@ -10,14 +11,13 @@ interface IParamsType {
 }
 
 const DetailsPage = async ({ params }: IParamsType) => {
+  const getData  = await getApidata()
   const { id } = await params
-  const paramsData = await getSingleData(id)
-
-
-
+  const paramsData = getData.find(data=>data.id === Number(id))
   if (!paramsData) {
     notFound()
   }
+
   return (
     <div className='mt-8 container lg:w-239 mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-14 px-4 sm:px-6 lg:px-0'>
 
