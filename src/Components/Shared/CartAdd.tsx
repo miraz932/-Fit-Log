@@ -3,7 +3,6 @@ import Image from 'next/image';
 import React from 'react';
 import { IoMdTime } from 'react-icons/io';
 import { MdOutlineStarOutline } from 'react-icons/md';
-import { TbCircleDotFilled } from 'react-icons/tb';
 import icon from '../../../public/Vector (1).png'
 import Link from 'next/link';
 
