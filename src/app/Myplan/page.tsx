@@ -14,7 +14,7 @@ import { use, useContext } from 'react';
 const MuplanePage = () => {
   const { toggle } = useContext(ExerciseContext)!
   const { sortBy, setSortBy } = use(ExerciseContext)!
-  const { state ,saveState } = use(ExerciseContext)!
+  const { state, saveState } = use(ExerciseContext)!
 
   const getSortedExercises = (exercises: IDataType[]): IDataType[] => {
     const sorted = [...exercises];
@@ -35,43 +35,38 @@ const MuplanePage = () => {
 
 
   return (
-    <div className='mt-5 container mx-auto'>
-
+    <div className='mt-5 container mx-auto px-4 lg:w-5xl'>
       {toggle === false && <Total />}
       {toggle === true && <SaveTotal />}
 
-
-      <div className=' flex justify-between mt-5 items-center '>
-        <div className='bg-[#151921] border border-gray-700 cursor-pointer w-fit px-3 py-2 flex gap-2 rounded-lg'>
+      <div
+        className='flex flex-col gap-4 mt-5 md:flex-row md:justify-between md:items-center'>
+        <div
+          className=' bg-[#151921] border border-gray-700 cursor-pointerw-fit px-3 py-2 flex gap-2 rounded-lg '>
           <ToggleButton></ToggleButton>
         </div>
 
-
         <div>
-          {/* <h3>Sort</h3> */}
           <select
             defaultValue="Pick a Runtime"
-            className="select select-success"
-            onChange={(e) => setSortBy(e.target.value as 'rating' | "duration" | "celories")}
-          >
+            className='select select-success w-full md:w-auto'
+            onChange={(e) =>
+              setSortBy(
+                e.target.value as 'rating' | 'duration' | 'celories')}>
             <option disabled={true}>Sort By</option>
             <option value='duration'>Duration</option>
             <option value='celories'>Celories</option>
             <option value='rating'>Rating</option>
           </select>
         </div>
-
       </div>
 
-      <div>
-        {toggle === false && <TodayPlan exercises={sortedExercises}/>}
-        {toggle === true && <Saved savedState={sortedSaved}/>}
-
+      <div className='mt-4'>
+        {toggle === false && (
+          <TodayPlan exercises={sortedExercises} />)}
+        {toggle === true && (
+          <Saved savedState={sortedSaved} />)}
       </div>
-
-
-
-
     </div>
   );
 };

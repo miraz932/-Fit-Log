@@ -24,14 +24,12 @@ const Navber = () => {
               alt="Navbar Logo"
               width={100}
               height={100}
-              className="w-fit h-7"
-            />
+              className="w-fit h-7"/>
 
             <h3 className="font-bold text-white text-xl">
               FITLOG
             </h3>
           </div>
-
           {/* Navigation */}
           <ul className="hidden md:flex items-center gap-4">
             <Link href="/">
@@ -39,9 +37,7 @@ const Navber = () => {
                 className={
                   pathname === "/"
                     ? "px-2.5 py-0.5 font-semibold text-[#C2F800] bg-[#c2f8004e] rounded-xl"
-                    : "text-white"
-                }
-              >
+                    : "text-white"}>
                 Workout
               </li>
             </Link>
@@ -51,9 +47,7 @@ const Navber = () => {
                 className={
                   pathname === "/Myplan"
                     ? "px-2.5 py-0.5 font-semibold text-[#C2F800] bg-[#c2f8004e] rounded-xl"
-                    : "text-white"
-                }
-              >
+                    : "text-white"}>
                 My plan
               </li>
             </Link>
@@ -94,23 +88,13 @@ const Navber = () => {
           <Link href="/">
             <li
               className={
-                pathname === "/"
-                  ? "px-2.5 py-0.5 font-semibold text-[#C2F800] bg-[#c2f8004e] rounded-xl"
-                  : "text-white"
-              }
-            >
-              Workout
-            </li>
+                pathname === "/"? "px-2.5 py-0.5 font-semibold text-[#C2F800] bg-[#c2f8004e] rounded-xl": "text-white"}> Workout</li>
           </Link>
 
           <Link href="/Myplan">
             <li
               className={
-                pathname === "/Myplan"
-                  ? "px-2.5 py-0.5 font-semibold text-[#C2F800] bg-[#c2f8004e] rounded-xl"
-                  : "text-white"
-              }
-            >
+                pathname === "/Myplan" ? "px-2.5 py-0.5 font-semibold text-[#C2F800] bg-[#c2f8004e] rounded-xl" : "text-white"} >
               My plan
             </li>
           </Link>
