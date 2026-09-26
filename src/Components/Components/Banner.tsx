@@ -4,9 +4,9 @@ import banner from "../../../public/banner.png"
 
 const Banner = () => {
   return (
-    <div className='lg:w-5xl container py-6 mx-auto md:p-10 bg-[#15171D] flex flex-col-reverse md:flex-row justify-between items-center rounded-2xl mt-8'>
+    <div className='lg:w-250 container py-6 mx-auto md:p-10 bg-[#15171D] flex flex-col-reverse md:flex-row justify-between items-center rounded-2xl mt-8'>
 
-      <div className='grid gap-3.5 md:gap-2.5 w-150 justify-center md:justify-start text-center md:text-start'>
+      <div className='grid  gap-3.5 md:gap-2.5 w-150 justify-center md:justify-start text-center md:text-start'>
         <p className='text-[#C2F800] font-light'>WORKOUT LIBRARY</p>
 
         <h1 className='font-bold text-4xl'>

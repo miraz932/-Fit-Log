@@ -19,14 +19,14 @@ const DetailsPage = async ({ params }: IParamsType) => {
     notFound()
   }
   return (
-    <div className='mt-8 container mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-14 px-4 sm:px-6 lg:px-0'>
+    <div className='mt-8 container lg:w-239 mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-14 px-4 sm:px-6 lg:px-0'>
 
       <Image
         src={paramsData.image}
         alt={paramsData?.name}
         width={300}
         height={300}
-        className='rounded-xl w-full sm:w-140 lg:w-140 h-auto sm:h-140 lg:h-140 object-cover object-center' />
+        className='rounded-xl w-full sm:w-140 lg:w-100 h-auto sm:h-140 lg:h-140 object-cover object-center' />
 
       <div className='grid gap-4 w-full'>
         <h3 className='font-bold text-3xl sm:text-4xl'>
@@ -90,7 +90,6 @@ const DetailsPage = async ({ params }: IParamsType) => {
 
         <div>
           <h2 className='font-bold text-2xl'>INSTRUCTIONS</h2>
-
           <div className='grid gap-1 mt-1.5'>
             <h4 className='text-[#D1D5DB]'>1.{paramsData.instructions[0]}</h4>
             <h4 className='text-[#D1D5DB]'>2.{paramsData.instructions[1]}</h4>
