@@ -9,7 +9,7 @@ const Banner = () => {
       <div className='grid  gap-3.5 md:gap-2.5 w-150 justify-center md:justify-start text-center md:text-start'>
         <p className='text-[#C2F800] font-light'>WORKOUT LIBRARY</p>
 
-        <h1 className='font-bold text-4xl'>
+        <h1 className='font-bold text-4xl text-[#ffff]'>
           TRAIN WITH INTENT. LOG<br />
           EVERY SET.
         </h1>

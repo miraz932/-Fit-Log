@@ -1,5 +1,5 @@
 import Details from '@/Components/Details/Details';
-import getApidata from '@/LIb/Api';
+import getApidata, { getSingleData } from '@/LIb/Api';
 
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -9,11 +9,13 @@ interface IParamsType {
     id: string
   }>
 }
+interface IParamsType {
+  params: Promise<{ id: string }>;
+}
 
 const DetailsPage = async ({ params }: IParamsType) => {
-  const getData  = await getApidata()
-  const { id } = await params
-  const paramsData = getData.find(data=>data.id === Number(id))
+  const { id } = await params;
+  const paramsData = await getSingleData(id);
   if (!paramsData) {
     notFound()
   }
