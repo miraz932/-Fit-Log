@@ -20,7 +20,7 @@ const DetailsPage = async ({ params }: IParamsType) => {
   return (
     <div className='mt-8 container mx-auto flex justify-between gap-14'>
 
-      <Image src={paramsData.image} alt={paramsData?.name} width={300} height={300} className='rounded-xl w-120 h-140 object-cover object-center'></Image>
+      <Image src={paramsData.image} alt={paramsData?.name} width={300} height={300} className='rounded-xl w-140 h-140 object-cover object-center'></Image>
 
       <div className='grid gap-4'>
 

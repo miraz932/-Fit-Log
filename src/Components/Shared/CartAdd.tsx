@@ -11,7 +11,7 @@ const CartAdd = ({ exercise }: { exercise: IDataType }) => {
   return (
     <div className='group w-full max-w-md overflow-hidden rounded-2xl cursor-pointer border border-slate-700 bg-[#15171e] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border hover:border-[#C2F800] hover:shadow-lg '>
       <Link href={`/${exercise.id}`}>
-        <Image className='overflow-hidden w-full h-48 object-cover' src={exercise.image} alt=''
+        <Image className='overflow-hidden w-full h-50 object-center object-cover ' src={exercise.image} alt=''
           height={450}
           width={300} />
  

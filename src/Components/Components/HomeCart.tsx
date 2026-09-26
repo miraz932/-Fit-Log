@@ -8,19 +8,21 @@ const HomeCart = async () => {
   const data = await getApidata()
 
   return (
-    <div className='container  mx-auto mt-10'>
-      <div>
-        <h1  className='text-2xl font-bold'>THE LIBRARY</h1>
-        <p className='text-[#9CA3AF]'>Twelve lifts covering every major muscle group.</p>
+    <div className='container mx-auto mt-10 px-4 lg:w-5xl'>
+      <div className='text-center lg:text-start'>
+        <h1 className='text-2xl font-bold'>THE LIBRARY</h1>
+        <p className='text-[#9CA3AF]'>
+          Twelve lifts covering every major muscle group.
+        </p>
       </div>
 
-
-      <div className='grid grid-cols-3 gap-3 mt-4 '>
+      <div className='grid grid-cols-1  md:grid-cols-2  lg:grid-cols-3 w-full gap-3  mt-4'>
         {
           data.map((exercise: IDataType) => {
             return (
-              <CartAdd key={exercise.id} exercise={exercise}></CartAdd>
-
+              <CartAdd
+                key={exercise.id}
+                exercise={exercise}/>
             )
           })
         }

@@ -8,15 +8,13 @@ import Total from '@/Components/myplan/Total.Length/Total';
 
 import { ExerciseContext } from '@/Contexts/Contex';
 import { IDataType } from '@/Type';
-import { Dispatch, SetStateAction, use, useContext } from 'react';
+import { use, useContext } from 'react';
 
 
 const MuplanePage = () => {
   const { toggle } = useContext(ExerciseContext)!
   const { sortBy, setSortBy } = use(ExerciseContext)!
-  const { state } = use(ExerciseContext)!
-  const {saveState}=use(ExerciseContext)!
-
+  const { state ,saveState } = use(ExerciseContext)!
 
   const getSortedExercises = (exercises: IDataType[]): IDataType[] => {
     const sorted = [...exercises];
@@ -27,7 +25,6 @@ const MuplanePage = () => {
     if (sortBy === 'duration') {
       return sorted.sort((a, b) => a.duration - b.duration);
     }
-
     if (sortBy === 'celories') {
       return sorted.sort((a: any, b: any) => a.celories - b.celories);
     }
