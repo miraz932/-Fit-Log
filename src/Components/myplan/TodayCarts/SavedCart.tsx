@@ -11,6 +11,8 @@ import { toast } from 'react-toastify';
 
 const SavedCart = ({ saveData }: { saveData: IDataType }) => {
   const { saveState, setSaveState } = use(ExerciseContext)!
+
+  
   const handleSaveButton = (valu: number) => {
     setSaveState(saveState.filter(state => state.id !== valu))
     toast.success("Remove")

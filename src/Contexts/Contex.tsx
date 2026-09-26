@@ -8,6 +8,8 @@ type SortByType = "rating" | "duration" | "celories";
 export interface contextType {
   toggle: boolean
   setToggle: React.Dispatch<React.SetStateAction<boolean>>
+  disable: boolean
+  setDisable: React.Dispatch<React.SetStateAction<boolean>>
   state: IDataType[]
   setState: React.Dispatch<React.SetStateAction<IDataType[]>>
   saveState: IDataType[]
@@ -24,6 +26,7 @@ const ContexProvider = ({ children }: { children: ReactNode }) => {
   const [state, setState] = useState<IDataType[]>([])
   const [saveState,setSaveState] = useState<IDataType[]>([])
   const [sortBy,setSortBy]=useState<'rating'|"duration"|"celories">('rating')
+  const [disable,setDisable]=useState<boolean>(false)
   const shareData = {
     toggle,
     setToggle,
@@ -32,7 +35,9 @@ const ContexProvider = ({ children }: { children: ReactNode }) => {
     saveState,
     setSaveState,
     sortBy,
-    setSortBy
+    setSortBy,
+    disable,
+    setDisable
 
   }
 

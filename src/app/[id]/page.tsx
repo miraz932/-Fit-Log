@@ -1,7 +1,7 @@
 import Details from '@/Components/Details/Details';
-import getApidata from '@/LIb/Api';
-import { IDataType } from '@/Type';
+import { getSingleData } from '@/LIb/Api';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import React from 'react';
 interface IParamsType {
   params: Promise<{
@@ -10,12 +10,13 @@ interface IParamsType {
 }
 
 const DetailsPage = async ({ params }: IParamsType) => {
-  const data = await getApidata()
   const { id } = await params
+  const paramsData = await getSingleData(id)
 
-  const paramsData = data.find((data) => data.id === Number(id))
+
+
   if (!paramsData) {
-    return <p>Data not found</p>;
+    notFound()
   }
   return (
     <div className='mt-8 container mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-14 px-4 sm:px-6 lg:px-0'>

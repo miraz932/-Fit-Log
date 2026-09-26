@@ -14,7 +14,7 @@ const Navber = () => {
   const { saveState } = use(ExerciseContext)!
 
   return (
-    <nav className="border-b border-[#1B1F28] bg-[#0C0D10]">
+    <nav className="border-b border-[#1B1F28] bg-[#0C0D10] sticky top-0 z-50 ">
       <div className="container mx-auto px-4 py-4 lg:w-5xl">
         <div className="flex items-center justify-between">
 
@@ -45,9 +45,7 @@ const Navber = () => {
               <li
                 className={
                   pathname === "/Myplan"
-                    ? "px-2.5 py-0.5 font-semibold text-[#C2F800] bg-[#c2f8004e] rounded-xl": "text-white"
-                }
-              >
+                    ? "px-2.5 py-0.5 font-semibold text-[#C2F800] bg-[#c2f8004e] rounded-xl": "text-white"}>
                 My plan
               </li>
             </Link>
@@ -64,9 +62,7 @@ const Navber = () => {
             </div>
 
             <ul
-              tabIndex={0}
-              className="dropdown-content menu bg-[#15171D] border border-[#1B1F28] rounded-box z-50 w-40 p-2 shadow-lg"
-            >
+              tabIndex={0}className="dropdown-content menu bg-[#15171D] border border-[#1B1F28] rounded-box z-50 w-40 p-2 shadow-lg" >
               <li>
                 <Link
                   href="/" className={pathname === "/"? "text-[#C2F800] font-semibold"  : "text-white"
@@ -108,9 +104,7 @@ const Navber = () => {
                 </span>
               </button>
             </Link>
-
           </div>
-
         </div>
 
       </div>
